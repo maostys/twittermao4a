@@ -1,10 +1,10 @@
 import java.io.IOException;
 
-//Fixel‚©‚çì¬‚·‚é
-//pom‚ğƒTƒ“ƒvƒ‹‚Ìg‚¤
-//import webƒT[ƒuƒŒƒbƒg‚ğƒgÁ‚·iver2.5‚Ì‚½‚ßj@«‚Ì‚æ‚¤‚É‚·‚ê‚Î‚n‚j
-//src/testÁ‚µ‚½iƒƒ\ƒbƒhƒGƒ‰[o‚é‚½‚ßj
-//appengine-web.xml‚ğ’Ç‰ÁiWEB-INF‚Éj
+//Fixelï¿½ï¿½ï¿½ï¿½ì¬ï¿½ï¿½ï¿½ï¿½
+//pomï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Ìgï¿½ï¿½
+//import webï¿½Tï¿½[ï¿½uï¿½ï¿½ï¿½bï¿½gï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½iver2.5ï¿½Ì‚ï¿½ï¿½ßjï¿½@ï¿½ï¿½ï¿½Ì‚æ‚¤ï¿½É‚ï¿½ï¿½ï¿½Î‚nï¿½j
+//src/testï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½Gï¿½ï¿½ï¿½[ï¿½oï¿½é‚½ï¿½ßj
+//appengine-web.xmlï¿½ï¿½Ç‰ï¿½ï¿½iWEB-INFï¿½Éj
 import java.io.IOException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,22 +26,12 @@ public class HelloAppEngine extends HttpServlet{
 
 
 
-	private static final String tweet = "‚±‚ÌƒuƒƒO’´–Ê”’‚¢ww¨";
+	private static final String tweet = "ï¿½ï¿½ï¿½Ìƒuï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½Ê”ï¿½ï¿½ï¿½wwï¿½ï¿½";
 
 	private static final String getTweet(){
 		String tweets[] = {
-				"—´ò“´",
-				"¬Šâˆä”_ê",
-				"‚³‚ñ‚³—x‚è",
-				"·‰ª”üpŠÙ",
-				"…—j‚Í’è‹x“ú‚È‚ñ‚¾‚æ‚È",
-				"‚Æ‚è‚ ‚¦‚¸ç‰Æs‚±‚¤‚º",
-				"ƒ†[Aƒ‰ƒCƒX•t‚¯‚¿‚á‚¤H",
-				"ƒ~ƒjƒJƒŒ[‚àˆÓŠO‚Æ”ü–¡‚µ‚¢‚º",
-				"ƒlƒM‚¤‚Ü‚·‚¬",
-				"‚ ‚ÌƒlƒM·Œ©‚é‚Æƒeƒ“ƒVƒ‡ƒ“‚ ‚ª‚Á‚¿‚á‚¤‚æ‚Ë[",
-				"‘å«‚Ü‚¶‚©‚Á‚¯‚¥",
-				"‚±‚±‚ÍHŒ”§‚Å‚·"
+
+				"ã‚ã‚"
 		};
 		int randint = (int)(Math.random()*tweets.length);
 		return tweets[randint];
@@ -63,7 +53,7 @@ public class HelloAppEngine extends HttpServlet{
 		String message = getTweet();
 		Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 		try {
-			//Twitter‚É‘‚«o‚µ
+			//Twitterï¿½Éï¿½ï¿½ï¿½ï¿½oï¿½ï¿½
 			twitter.updateStatus(message);
 		} catch (TwitterException e) {
 			//logger.log(Level.SEVERE, "Twitter error", e);
@@ -77,16 +67,16 @@ public class HelloAppEngine extends HttpServlet{
 				twitter.setOAuthAccessToken(new AccessToken(accessToken,accessTokenSecret));
 				try{
 					twitter.updateStatus(tweet);
-					System.out.println("ƒcƒC[ƒg‚µ‚½‚æ‚—");
+					System.out.println("ï¿½cï¿½Cï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½æ‚—");
 				} catch(TwitterException e){
-					System.err.println("ƒcƒC[ƒg¸”s"+e.getMessage());
+					System.err.println("ï¿½cï¿½Cï¿½[ï¿½gï¿½ï¿½ï¿½s"+e.getMessage());
 				}
 
 			try{
 				twitter.updateStatus(getTweet());
-				System.out.println("ƒcƒC[ƒg‚µ‚½‚æ‚—");
+				System.out.println("ï¿½cï¿½Cï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½æ‚—");
 			} catch(TwitterException d){
-					System.err.println("ƒcƒC[ƒg¸”s"+d.getMessage());
+					System.err.println("ï¿½cï¿½Cï¿½[ï¿½gï¿½ï¿½ï¿½s"+d.getMessage());
 
 			}
 			}
