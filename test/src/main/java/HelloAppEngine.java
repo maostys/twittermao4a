@@ -1,8 +1,10 @@
 import java.io.IOException;
 
+//Fixelから作成
 //pomをサンプルの使う
 //webサーブレット消す（ver2.5のため）
-//sec/test消した
+//src/test消した
+//appengine-web.xmlを追加
 import java.io.IOException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
